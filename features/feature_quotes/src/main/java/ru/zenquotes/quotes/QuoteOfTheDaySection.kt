@@ -15,14 +15,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import ru.zenquotes.quotes.store.HomeStore
+import money.vivid.elmslie.core.store.ElmStore
+import ru.zenquotes.quotes.helpers.HomeCommand
+import ru.zenquotes.quotes.helpers.HomeEffect
+import ru.zenquotes.quotes.helpers.HomeEvents
+import ru.zenquotes.quotes.helpers.HomeState
 import ru.zenquotes.theme.theme.poppinsFont
 
 @Composable
 fun QuoteOfTheDaySection(
-    homeStore: HomeStore,
+    homeStore: ElmStore<HomeEvents, HomeState, HomeEffect, HomeCommand>,
 ) {
-    val state by homeStore.store.states.collectAsStateWithLifecycle()
+    val state by homeStore.states.collectAsStateWithLifecycle()
 
     Box(
         modifier = Modifier

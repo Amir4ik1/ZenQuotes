@@ -29,16 +29,20 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import coil3.compose.rememberAsyncImagePainter
 import kotlinx.coroutines.delay
+import money.vivid.elmslie.core.store.ElmStore
+import ru.zenquotes.quotes.helpers.HomeCommand
 import ru.zenquotes.quotes.helpers.HomeEffect
+import ru.zenquotes.quotes.helpers.HomeEvents
+import ru.zenquotes.quotes.helpers.HomeState
 import ru.zenquotes.quotes.store.HomeStore
 
 @Composable
 fun HomeScreen(
     paddingValues: PaddingValues,
     navHost: NavHostController,
-    store: HomeStore = hiltViewModel()
+    store: ElmStore<HomeEvents, HomeState, HomeEffect, HomeCommand> = hiltViewModel<HomeStore>().store
 ) {
-    val effects = remember { store.store.effects }
+    val effects = remember { store.effects }
     val context = LocalContext.current
 
     var isVisible by remember {

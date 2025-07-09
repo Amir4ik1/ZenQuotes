@@ -39,7 +39,6 @@ import ru.zenquotes.theme.theme.Violet
 import ru.zenquotes.theme.theme.poppinsFont
 
 /** DEFAULT STYLE */
-//@Preview
 @Composable
 fun DefaultQuoteCard(modifier: Modifier, quote: Quote) {
     Box(

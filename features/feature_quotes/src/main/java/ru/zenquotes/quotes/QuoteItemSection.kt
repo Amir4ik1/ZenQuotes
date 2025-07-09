@@ -37,10 +37,13 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import coil3.compose.AsyncImage
 import com.aghajari.compose.lazyswipecards.LazySwipeCards
+import money.vivid.elmslie.core.store.ElmStore
 import ru.zenquotes.common.utils.Screen
 import ru.zenquotes.domain.models.Quote
+import ru.zenquotes.quotes.helpers.HomeCommand
+import ru.zenquotes.quotes.helpers.HomeEffect
 import ru.zenquotes.quotes.helpers.HomeEvents
-import ru.zenquotes.quotes.store.HomeStore
+import ru.zenquotes.quotes.helpers.HomeState
 import ru.zenquotes.theme.theme.CustomBlack
 import ru.zenquotes.theme.theme.CustomGray
 import ru.zenquotes.theme.theme.classicFont
@@ -48,7 +51,7 @@ import ru.zenquotes.theme.theme.classicFont
 @Composable
 fun QuoteItem(
     data: Quote,
-    store: HomeStore,
+    store: ElmStore<HomeEvents, HomeState, HomeEffect, HomeCommand>,
     navHost: NavHostController
 ) {
     val gradient = Brush.radialGradient(
@@ -119,7 +122,7 @@ fun QuoteItem(
                     modifier = Modifier
                         .size(40.dp)
                         .clickable {
-                            store.store.accept(HomeEvents.LikeQuote(data))
+                            store.accept(HomeEvents.LikeQuote(data))
                         }
                 )
             } else {
@@ -129,7 +132,7 @@ fun QuoteItem(
                     modifier = Modifier
                         .size(40.dp)
                         .clickable {
-                            store.store.accept(HomeEvents.LikeQuote(data))
+                            store.accept(HomeEvents.LikeQuote(data))
                         }
                 )
             }
@@ -154,10 +157,10 @@ fun QuoteItem(
 
 @Composable
 fun QuoteItemListSection(
-    store: HomeStore,
+    store: ElmStore<HomeEvents, HomeState, HomeEffect, HomeCommand>,
     navHost: NavHostController,
 ) {
-    val state by store.store.states.collectAsStateWithLifecycle()
+    val state by store.states.collectAsStateWithLifecycle()
 
     if (state.isLoading) {
         Box(
@@ -187,7 +190,7 @@ fun QuoteItemListSection(
                 Spacer(modifier = Modifier.height(20.dp))
 
                 Button(
-                    onClick = { store.store.accept(HomeEvents.Retry) },
+                    onClick = { store.accept(HomeEvents.Retry) },
                     colors = ButtonDefaults.buttonColors(White)
                 ) {
                     Text(
