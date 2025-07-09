@@ -46,6 +46,7 @@ workmanager = "2.10.2"
 glanceAppwidget = "1.1.1"
 lazySwipeCards = "1.0.1"
 uiTestJunit4Android = "1.8.3"
+detekt = "1.23.8"
 
 [libraries]
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
@@ -137,6 +138,7 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 
 [bundles]
 
