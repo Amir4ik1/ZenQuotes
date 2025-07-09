@@ -1,0 +1,162 @@
+[versions]
+agp = "8.10.1"
+kotlin = "2.1.20"
+ksp = "2.1.20-2.0.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+
+# MultiThreading
+kotlinx-coroutines = "1.10.2"
+
+# Network & Serialization
+kotlinx-serialization = "1.8.1"
+okhttp = "4.12.0"
+retrofit = "2.11.0"
+
+# ElmSlie
+elmslie3 = "3.0.0"
+
+# Compose
+androidxComposeBom = "2025.06.01"
+coil-compose = "3.1.0"
+
+# AndroidX
+lifecycle = "2.9.1"
+core = "1.16.0"
+appcompat = "1.7.1"
+material = "1.12.0"
+fragment = "1.8.8"
+datastore = "1.1.4"
+multidex = "2.0.1"
+androidxActivity = "1.10.1"
+splashscreen = "1.0.1"
+roomRuntime = "2.7.2"
+
+# Others
+dagger = "2.56.2"
+hilt = "1.2.0"
+workmanager = "2.10.2"
+glanceAppwidget = "1.1.1"
+lazySwipeCards = "1.0.1"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+# Multithreading
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+
+# Network & Serialization
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-loggingInterceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
+#ElmSlie
+elmslie3 = { group = "money.vivid.elmslie", name = "elmslie-core", version.ref = "elmslie3" }
+
+# Compose
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "androidxActivity" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-material = { group = "androidx.compose.material", name = "material" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime" }
+androidx-compose-animation-graphics-android = { group = "androidx.compose.animation", name = "animation-graphics-android" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-text = { group = "androidx.compose.ui", name = "ui-text" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util" }
+androidx-lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose" }
+
+# AndroidX
+lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+material-core = { module = "com.google.android.material:material", version.ref = "material" }
+fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
+datastore = { group = "androidx.datastore", name = "datastore", version.ref = "datastore" }
+datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+datastore-preferences-core = { group = "androidx.datastore", name = "datastore-preferences-core", version.ref = "datastore" }
+multidex = { module = "androidx.multidex:multidex", version.ref = "multidex" }
+androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "androidxActivity" }
+androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen" }
+
+# Dagger
+hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger" }
+hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "dagger" }
+
+# Room
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomRuntime" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomRuntime" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomRuntime" }
+
+# Coil
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil-compose" }
+coil-network-okhttp = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil-compose" }
+
+# Others
+workmanager-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workmanager" }
+glance-appwidget = { group = "androidx.glance", name = "glance-appwidget", version.ref = "glanceAppwidget" }
+lazyswipe-cards = { group = "io.github.aghajari", name = "LazySwipeCards", version.ref = "lazySwipeCards" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+[bundles]
+
+coroutines = [
+    "kotlinx-coroutines-android",
+    "kotlinx-coroutines-core",
+    "kotlinx-coroutines-test"
+]
+
+compose = [
+    "androidx-activity-compose",
+    "androidx-compose-bom",
+    "androidx-compose-foundation",
+    "androidx-compose-material",
+    "androidx-compose-material3",
+    "androidx-compose-runtime",
+    "androidx-compose-animation-graphics-android",
+    "androidx-compose-ui",
+    "androidx-compose-ui-text",
+    "androidx-compose-ui-tooling-preview",
+    "androidx-compose-ui-util",
+    "androidx-lifecycle-compose"
+]
+
+androidx = [
+    "androidx-activity",
+    "lifecycle-runtime",
+    "androidx-core",
+    "androidx-core-splashscreen",
+    "datastore-preferences",
+    "datastore-preferences-core",
+    "datastore",
+    "multidex",
+    "appcompat",
+    "material-core",
+    "fragment"
+]
+
